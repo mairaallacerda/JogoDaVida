@@ -33,6 +33,16 @@
   
 Essas regras simples criam uma dinâmica surpreendentemente complexa e são a base para a fascinante evolução dos padrões no Jogo da Vida.
 
+## Objetivo do Código
+<p align="justify">
+O objetivo deste código é revisar e aplicar conceitos de manipulação de matrizes, controle de fluxo e lógica de jogo, através da implementação do Jogo da Vida. Para alcançar este objetivo, considere as seguintes tarefas:
+1. *Leitura da Matriz de Entrada:* Ler a matriz de entrada de um arquivo chamado input.mps localizado na pasta datasets do projeto. A matriz deve ter um tamanho mínimo de 5x5.
+2. *Composição da Matriz de Entrada:* Compor a matriz de entrada considerando uma fração de 2 para 1 para os valores 0s e 1s. Garanta que o número de 1s seja menor para produzir um melhor espalhamento.
+3. *Avaliação e Geração de Novas Matrizes:* A cada interação do jogo, avaliar a matriz atual de acordo com as regras do Jogo da Vida e produzir os resultados da avaliação em uma nova matriz.
+      - Salvar cada matriz avaliada como parte dos resultados em um arquivo chamado geracoes.mps.
+4. *Organização do Arquivo geracoes.mps:* Organizar o arquivo geracoes.mps para mostrar todas as evoluções do jogo, incluindo a matriz de origem da execução.
+5. *Entrada do Usuário:* Solicitar ao usuário apenas o número de gerações a serem avaliadas.
+
 
 ## Compilação e Execução
 
