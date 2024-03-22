@@ -8,4 +8,6 @@
 - `2 - Estabilidade`: Qualquer célula viva com dois ou três vizinhos vivos continua viva para a próxima geração.
 - `3 - Superpopulação`: Qualquer célula viva com mais de três vizinhos vivos morre de superpopulação.
 - `4 - Reprodução`: Qualquer célula morta com exatamente três vizinhos vivos se torna uma célula viva.
+
+  
 Essas regras simples criam uma dinâmica surpreendentemente complexa e são a base para a fascinante evolução dos padrões no Jogo da Vida.
