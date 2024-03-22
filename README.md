@@ -16,6 +16,8 @@
 
 - [Regras Básicas](#regras-básicas)
 
+- .[Objetivo do Código](#objetivo-do-código)
+
 - [Compilação e Execução](#compilação-e-execução)
 
 ## Descrição do projeto 
@@ -48,6 +50,7 @@ O objetivo deste código é revisar e aplicar conceitos de manipulação de matr
    
 5. *Entrada do Usuário:* Solicitar ao usuário apenas o número de gerações a serem avaliadas.
 
+Por dessas implementações, o código busca proporcionar uma revisão prática e aplicada dos conceitos mencionados, enquanto oferece uma execução interativa do Jogo da Vida.
 
 ## Compilação e Execução
 
