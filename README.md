@@ -25,9 +25,9 @@
 
  # :hammer: Regras Básicas
  As células do Jogo da Vida seguem as seguintes regras de evolução:
-- `1 - Subpopulação`: Qualquer célula viva com menos de dois vizinhos vivos morre de solidão.
-- `2 - Estabilidade`: Qualquer célula viva com dois ou três vizinhos vivos continua viva para a próxima geração.
-- `3 - Superpopulação`: Qualquer célula viva com mais de três vizinhos vivos morre de superpopulação.
+- `1 - Solidão`: Qualquer célula viva com menos de dois vizinhos vivos morre de solidão.
+- `2 - Superpopulação`: Qualquer célula viva com mais de três vizinhos vivos morre de superpopulação.
+- `3`: Uma célula viva com dois ou três vizinhos vivos sobrevive
 - `4 - Reprodução`: Qualquer célula morta com exatamente três vizinhos vivos se torna uma célula viva.
 
   
