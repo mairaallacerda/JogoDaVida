@@ -62,6 +62,13 @@ Em primeiro lugar, é relevante destacar que o programa possui uma interface sim
   <img height="250rem" src="/imagens/imagem1.png">
           </p>
 
+Também é importante compreender que todas as implementações estão distribuídas em diferentes arquivos, os quais estão detalhados na figura abaixo, juntamente com a funcionalidade de cada um deles.
+ <p align="center">
+  <img height="250rem" src="/imagens/imagem2.png">
+          </p>
+   - **_main.cpp_**: 
+   - **_jogoDaVida.hpp_**: 
+   - **_jogoDaVida.cpp_**: 
 ## Compilação e Execução
 
 O código disponibilizado possui um arquivo Makefile que realiza todo o procedimento de compilação e execução. Para tanto, temos as seguintes diretrizes de execução:
