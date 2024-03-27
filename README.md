@@ -15,11 +15,13 @@
         
  [Descrição do projeto](#descrição-do-projeto)
 
- [Regras Básicas](#regras-básicas)
+ [Regras do Jogo](#regras-do-jogo)
 
  [Objetivo do Código](#objetivo-do-código)
   
  [Funcionamento](#funcionamento)
+
+[Resoluções](#resoluções)
 
  [Compilação e Execução](#compilação-e-execução)
  <h4>
@@ -29,7 +31,7 @@
 <p align="justify">
  O Jogo da Vida é um autômato celular fascinante que evolui de acordo com regras simples, mas gera padrões complexos. Inspirado pelo matemático John Conway, esse jogo é representado por uma matriz 2D de células, onde cada célula pode estar viva ou morta. A evolução das células é determinada por um conjunto de regras simples baseadas no número de células vizinhas vivas ou mortas.
 
- <h2 align="center"> Regras básicas </h2>
+ <h2 align="center"> Regras do Jogo </h2>
        <p>
  As células do Jogo da Vida seguem as seguintes regras de evolução:
            
@@ -75,14 +77,180 @@ Também é importante compreender que todas as implementações estão distribu�
   </p>
       </p>
       
-- **_main.cpp_**:
+- **_main.cpp_**: contém a função principal do programa, que executa o Jogo da Vida. Ele inclui o header _jogoDaVida.hpp_ para acessar as funcionalidades da classe _MatrizOperations_. Além disso, são incluídas as bibliotecas **_iostream_** e **_vector_** para operações de entrada/saída e manipulação de vetores, respectivamente.
    
-- **_jogoDaVida.hpp_**:
+- **_jogoDaVida.hpp_**: define a classe MatrizOperations, a qual encapsula as operações principais do Jogo da Vida. Esta classe fornece métodos para ler uma matriz de um arquivo, imprimir uma matriz na tela, criar uma nova geração de células com base nas regras do jogo, salvar uma matriz em um arquivo e limpar uma matriz para prepará-la para uma nova utilização.
 
-- **_jogoDaVida.cpp_**: 
+  </p> Além disso, este arquivo inclui as bibliotecas necessárias para o funcionamento dessas operações, como **_iostream_** e **_vector_**. O uso de um header guard (#ifndef JOGODAVIDA_HPP) é empregado para evitar a inclusão múltipla deste arquivo em diferentes partes do código. O código está contido no namespace "modificado" para garantir a modularidade e reutilização do código.
 
+- **_jogoDaVida.cpp_**: contém a implementação das operações principais do Jogo da Vida. Ele fornece funcionalidades essenciais para ler uma matriz de um arquivo, imprimir uma matriz na tela, criar uma nova geração de células com base nas regras do jogo, salvar uma matriz em um arquivo e limpar uma matriz para prepará-la para uma nova utilização. Essas operações são encapsuladas dentro do namespace "modificado" para garantir a modularidade e reutilização do código.
+
+ <h2 align="center"> Resoluções</h2>
+       <p align="justify">  
+           
+### Implementando
+Inicialmente, foi definida a classe MatrizOperations, que encapsula as operações relacionadas à manipulação de matrizes para o Jogo da Vida.
+Logo depois, cria o Método leraMatriz:
+
+* Este método é responsável por ler uma matriz a partir de um arquivo. Ele recebe o nome do arquivo como argumento.
+* O método abre o arquivo especificado e lê o tamanho da matriz.
+* Em seguida, ele dimensiona a matriz e preenche seus valores com base nos dados do arquivo.
+* Por fim, retorna a matriz lida
+
+```c++
+ vector<vector<int>> MatrizOperations::leraMatriz(string nomeArquivo)
+    {
+        ifstream file(nomeArquivo);
+        vector<vector<int>> matriz;
+
+        if (file.is_open())
+        {
+            int size;
+            file >> size;
+            file.ignore();
+            matriz.resize(size, vector<int>(size));
+            for (int i = 0; i < size; ++i)
+            {
+                for (int j = 0; j < size; ++j)
+                {
+                    char character;
+                    file >> character;
+                    matriz[i][j] = character - '0';
+                }
+                file.ignore();
+            }
+
+            file.close();
+        }
+        else
+        {
+            cerr << "Erro ao abrir o arquivo." << endl;
+        }
+        return matriz;
+    }
+
+```
+Depois de ler o arquivo, são impletados os métodos _imprimir_, _criarNovaGeracao_, _salvar_ e _limpar_
+1. Método imprimir
+   Este método recebe uma matriz como argumento e imprime seus valores na saída padrão (console)
    
-## Compilação e Execução
+```c++
+void MatrizOperations::imprimir(const vector<vector<int>> &matriz)
+    {
+        for (size_t i = 0; i < matriz.size(); ++i)
+        {
+            for (size_t j = 0; j < matriz[i].size(); ++j)
+            {
+                cout << matriz[i][j] << " ";
+            }
+            cout << endl
+                 << endl;
+        }
+    }
+    
+```
+2. Método criarNovaGeracao
+   * Este método recebe duas matrizes como argumento: a matriz de entrada (atual) e a matriz de saída (próxima geração).
+   * Ele itera sobre cada célula da matriz de entrada e aplica as regras do Jogo da Vida para determinar o estado da célula na próxima geração.
+   * As regras são aplicadas contando o número de células vizinhas vivas e mortas, e atualizando o estado da célula na matriz de saída de acordo com essas regras.
+     
+  ```c++
+ void MatrizOperations::criarNovaGeracao(const vector<vector<int>> &entrada, vector<vector<int>> &saida)
+    {
+        size_t tamanho = entrada.size();
+        saida = entrada;
+        for (size_t i = 0; i < tamanho; ++i)
+        {
+            for (size_t j = 0; j < entrada[i].size(); ++j)
+            {
+                int countZero = 0, countOne = 0;
+                for (int di = -1; di <= 1; ++di)
+                {
+                    for (int dj = -1; dj <= 1; ++dj)
+                    {
+                        if (di == 0 && dj == 0)
+                            continue;
+                        size_t ni = i + di;
+                        size_t nj = j + dj;
+                        if (ni < tamanho && nj < entrada[i].size())
+                        {
+                            if (entrada[ni][nj] == 0)
+                                countZero++;
+                            else
+                                countOne++;
+                        }
+                    }
+                }
+                // Regras
+                if (entrada[i][j] == 1 && (countOne < 2 || countOne > 3))
+                {
+                    saida[i][j] = 0; // Morte por solidão ou superpopulação
+                }
+                else if (entrada[i][j] == 0 && countOne == 3)
+                {
+                    saida[i][j] = 1; // Nascimento por reprodução
+                }
+                else
+                {
+                    saida[i][j] = entrada[i][j]; // Mantem o atual
+                }
+            }
+        }
+    }
+
+
+```
+3. Método salvar
+   * Este método recebe uma matriz, um nome de arquivo e um contador como argumentos.
+   * Ele abre o arquivo especificado em modo de apêndice e salva a matriz formatada com o número de geração correspondente.
+   * Após salvar a matriz, ele fecha o arquivo e imprime uma mensagem indicando o sucesso da operação.
+     
+  ```c++
+ void MatrizOperations::salvar(const vector<vector<int>> &matriz, const string &nomeArquivo, const int cont)
+    {
+        ofstream arquivo(nomeArquivo, ios::app);
+        if (!arquivo.is_open())
+        {
+            cerr << "Erro ao abrir o arquivo de saída." << endl;
+            return;
+        }
+        arquivo << "GERAÇÃO [" << cont << "]" << endl
+                << endl;
+        for (size_t i = 0; i < matriz.size(); ++i)
+        {
+            for (size_t j = 0; j < matriz[i].size(); ++j)
+            {
+                arquivo << matriz[i][j] << " ";
+            }
+            arquivo << endl
+                    << endl;
+        }
+        arquivo.close();
+        cout << "Matriz registrada com sucesso no arquivo: " << nomeArquivo << endl;
+    }
+
+```
+4. Método limpar
+   Este método recebe uma matriz como argumento e a preenche com zeros, limpando-a para prepará-la para uma nova utilização.
+   
+```c++
+    void MatrizOperations::limpar(vector<vector<int>> &matriz)
+    {
+        for (size_t i = 0; i < matriz.size(); ++i)
+        {
+            for (size_t j = 0; j < matriz[i].size(); ++j)
+            {
+                matriz[i][j] = 0;
+            }
+        }
+    }
+```
+
+Fim da implementação do jogoDaVida.cpp
+
+
+  <h2 align="center"> Compilação e Execução</h2>
+       <p align="justify">
 
 O código disponibilizado possui um arquivo Makefile que realiza todo o procedimento de compilação e execução. Para tanto, temos as seguintes diretrizes de execução:
 
@@ -92,3 +260,8 @@ O código disponibilizado possui um arquivo Makefile que realiza todo o procedim
 |  `make clean`          | Apaga a última compilação realizada contida na pasta build                                        |
 |  `make`                | Executa a compilação do programa utilizando o gcc, e o resultado vai para a pasta build           |
 |  `make run`            | Executa o programa da pasta build após a realização da compilação                                 |
+
+
+<a style="color:black" href="mailto:mairaallacerda@gmail.com?subject=[GitHub]%20Source%20Dynamic%20Lists">
+✉️ <i>mairaallacerda@gmail.com</i>
+</a>
