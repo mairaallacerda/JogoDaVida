@@ -21,9 +21,11 @@
   
  [Funcionamento](#funcionamento)
 
-[Resoluções](#resoluções)
+ [Resoluções](#resoluções)
 
  [Compilação e Execução](#compilação-e-execução)
+
+ [Contato](#contato)
  <h4>
 
 
@@ -261,7 +263,8 @@ O código disponibilizado possui um arquivo Makefile que realiza todo o procedim
 |  `make`                | Executa a compilação do programa utilizando o gcc, e o resultado vai para a pasta build           |
 |  `make run`            | Executa o programa da pasta build após a realização da compilação                                 |
 
-
+ <h2 align="center"> Contato</h2>
+       <p align="justify">
 <a style="color:black" href="mailto:mairaallacerda@gmail.com?subject=[GitHub]%20Source%20Dynamic%20Lists">
 ✉️ <i>mairaallacerda@gmail.com</i>
 </a>
