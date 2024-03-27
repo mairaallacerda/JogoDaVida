@@ -59,7 +59,7 @@ Por dessas implementações, o código busca proporcionar uma revisão prática 
       <p>
 Em primeiro lugar, é relevante destacar que o programa possui uma interface simplificada, composta apenas por uma pergunta, que tem a função de facilitar a interação entre o software e o usuário. Essa interface pode ser visualizada na imagem a seguir:
   <p align="center">
-  <img height="250rem" src="/imgs/menu.png">
+  <img height="250rem" src="/imgs/imagem1.png">
           </p>
 
 ## Compilação e Execução
