@@ -12,16 +12,16 @@
 
 <h2 align="center"> Tópicos </h2>
     <h4 align="center"> 
+        
+ [Descrição do projeto](#descrição-do-projeto)
 
-- [Descrição do projeto](#descrição-do-projeto)
+ [Regras Básicas](#regras-básicas)
 
-- [Regras Básicas](#regras-básicas)
-
-- [Objetivo do Código](#objetivo-do-código)
+ [Objetivo do Código](#objetivo-do-código)
   
-- [Funcionamento](#funcionamento)
+ [Funcionamento](#funcionamento)
 
-- [Compilação e Execução](#compilação-e-execução)
+ [Compilação e Execução](#compilação-e-execução)
  <h4>
 
 
@@ -29,7 +29,8 @@
 <p align="justify">
  O Jogo da Vida é um autômato celular fascinante que evolui de acordo com regras simples, mas gera padrões complexos. Inspirado pelo matemático John Conway, esse jogo é representado por uma matriz 2D de células, onde cada célula pode estar viva ou morta. A evolução das células é determinada por um conjunto de regras simples baseadas no número de células vizinhas vivas ou mortas.
 
- # :hammer: Regras Básicas
+ <h2 align="center"> Regras básicas </h2>
+       <p>
  As células do Jogo da Vida seguem as seguintes regras de evolução:
 - `1 - Solidão`: Qualquer célula viva com menos de dois vizinhos vivos morre de solidão.
 - `2 - Superpopulação`: Qualquer célula viva com mais de três vizinhos vivos morre de superpopulação.
@@ -39,8 +40,8 @@
   
 Essas regras simples criam uma dinâmica surpreendentemente complexa e são a base para a fascinante evolução dos padrões no Jogo da Vida.
 
-## Objetivo do Código
-<p align="justify">
+<h2 align="center"> Objetivo do código</h2>
+       <p align="justify">
 O objetivo deste código é revisar e aplicar conceitos de manipulação de matrizes, controle de fluxo e lógica de jogo, através da implementação do Jogo da Vida. Para alcançar este objetivo, considere as seguintes tarefas:
  
 1. *Leitura da Matriz de Entrada:* Ler a matriz de entrada de um arquivo chamado input.mps localizado na pasta datasets do projeto. A matriz deve ter um tamanho mínimo de 5x5.
@@ -60,16 +61,18 @@ Por dessas implementações, o código busca proporcionar uma revisão prática 
       <p>
 Em primeiro lugar, é relevante destacar que o programa possui uma interface simplificada, composta apenas por uma pergunta, que tem a função de facilitar a interação entre o software e o usuário. Essa interface pode ser visualizada na imagem a seguir:
   <p align="center">
-  <img height="250rem" src="/imagens/imagem1.png">
+  <img height="100rem" src="/imagens/imagem1.png">
           </p>
 
 Também é importante compreender que todas as implementações estão distribuídas em diferentes arquivos, os quais estão detalhados na figura abaixo, juntamente com a funcionalidade de cada um deles.
+
  <p align="center">
-  <img height="250rem" src="/imagens/imagem2.png">
-          </p>
-   - **_main.cpp_**: 
-   - **_jogoDaVida.hpp_**: 
-   - **_jogoDaVida.cpp_**: 
+  <img height="100rem" src="/imagens/imagem2.png">
+  </p>
+      </p>
+   ***main.cpp***: 
+   - **jogoDaVida.hpp**: 
+   - **jogoDaVida.cpp**: 
 
    
 ## Compilação e Execução
