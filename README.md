@@ -55,16 +55,17 @@ O objetivo deste código é revisar e aplicar conceitos de manipulação de matr
 
 Por dessas implementações, o código busca proporcionar uma revisão prática e aplicada dos conceitos mencionados, enquanto oferece uma execução interativa do Jogo da Vida.
 
-## Compilação e Execução
-
-O código disponibilizado possui um arquivo Makefile que realiza todo o procedimento de compilação e execução. Para tanto, temos as seguintes diretrizes de execução:
-
- <h2 align="center"> Funcionamento </h2>
+<h2 align="center"> Funcionamento </h2>
       <p>
 Em primeiro lugar, é relevante destacar que o programa possui uma interface simplificada, composta apenas por uma pergunta, que tem a função de facilitar a interação entre o software e o usuário. Essa interface pode ser visualizada na imagem a seguir:
   <p align="center">
   <img height="250rem" src="/imgs/menu.png">
           </p>
+
+## Compilação e Execução
+
+O código disponibilizado possui um arquivo Makefile que realiza todo o procedimento de compilação e execução. Para tanto, temos as seguintes diretrizes de execução:
+
        
 | Comando                |  Função                                                                                           |                     
 | -----------------------| ------------------------------------------------------------------------------------------------- |
