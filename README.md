@@ -69,6 +69,8 @@ Também é importante compreender que todas as implementações estão distribu�
    - **_main.cpp_**: 
    - **_jogoDaVida.hpp_**: 
    - **_jogoDaVida.cpp_**: 
+
+   
 ## Compilação e Execução
 
 O código disponibilizado possui um arquivo Makefile que realiza todo o procedimento de compilação e execução. Para tanto, temos as seguintes diretrizes de execução:
