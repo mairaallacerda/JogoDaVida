@@ -16,7 +16,10 @@
 
 - [Regras Básicas](#regras-básicas)
 
-- .[Objetivo do Código](#objetivo-do-código)
+- [Objetivo do Código](#objetivo-do-código)
+  
+- [Funcionamento](#funcionamento)
+
 
 - [Compilação e Execução](#compilação-e-execução)
 
@@ -56,7 +59,13 @@ Por dessas implementações, o código busca proporcionar uma revisão prática 
 
 O código disponibilizado possui um arquivo Makefile que realiza todo o procedimento de compilação e execução. Para tanto, temos as seguintes diretrizes de execução:
 
-
+ <h2 align="center"> Funcionamento </h2>
+      <p>
+Em primeiro lugar, é relevante destacar que o programa possui uma interface simplificada, composta apenas por uma pergunta, que tem a função de facilitar a interação entre o software e o usuário. Essa interface pode ser visualizada na imagem a seguir:
+  <p align="center">
+  <img height="250rem" src="/imgs/menu.png">
+          </p>
+       
 | Comando                |  Função                                                                                           |                     
 | -----------------------| ------------------------------------------------------------------------------------------------- |
 |  `make clean`          | Apaga a última compilação realizada contida na pasta build                                        |
