@@ -10,7 +10,8 @@
 
 
 
-### Tópicos 
+<h2 align="center"> Tópicos </h2>
+    <h4 align="center"> 
 
 - [Descrição do projeto](#descrição-do-projeto)
 
@@ -20,11 +21,11 @@
   
 - [Funcionamento](#funcionamento)
 
-
 - [Compilação e Execução](#compilação-e-execução)
+ <h4>
 
-## Descrição do projeto 
 
+<h2 align="center"> <strong><em>Descrição do Projeto</em></strong> </h2>
 <p align="justify">
  O Jogo da Vida é um autômato celular fascinante que evolui de acordo com regras simples, mas gera padrões complexos. Inspirado pelo matemático John Conway, esse jogo é representado por uma matriz 2D de células, onde cada célula pode estar viva ou morta. A evolução das células é determinada por um conjunto de regras simples baseadas no número de células vizinhas vivas ou mortas.
 
