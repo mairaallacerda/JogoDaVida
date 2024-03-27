@@ -32,10 +32,14 @@
  <h2 align="center"> Regras básicas </h2>
        <p>
  As células do Jogo da Vida seguem as seguintes regras de evolução:
-- `1 - Solidão`: Qualquer célula viva com menos de dois vizinhos vivos morre de solidão.
-- `2 - Superpopulação`: Qualquer célula viva com mais de três vizinhos vivos morre de superpopulação.
-- `3`: Uma célula viva com dois ou três vizinhos vivos sobrevive
-- `4 - Reprodução`: Qualquer célula morta com exatamente três vizinhos vivos se torna uma célula viva.
+           
+- Solidão: Qualquer célula viva com menos de dois vizinhos vivos morre de solidão.
+           
+- Superpopulação: Qualquer célula viva com mais de três vizinhos vivos morre de superpopulação.
+  
+- Uma célula viva com dois ou três vizinhos vivos sobrevive
+  
+- Reprodução: Qualquer célula morta com exatamente três vizinhos vivos se torna uma célula viva.
 
   
 Essas regras simples criam uma dinâmica surpreendentemente complexa e são a base para a fascinante evolução dos padrões no Jogo da Vida.
@@ -64,15 +68,18 @@ Em primeiro lugar, é relevante destacar que o programa possui uma interface sim
   <img height="100rem" src="/imagens/imagem1.png">
           </p>
 
-Também é importante compreender que todas as implementações estão distribuídas em diferentes arquivos, os quais estão detalhados na figura abaixo, juntamente com a funcionalidade de cada um deles.
+Também é importante compreender que todas as implementações estão distribuídas em três arquivos, os quais estão detalhados na figura abaixo, juntamente com a funcionalidade de cada um deles.
 
  <p align="center">
   <img height="100rem" src="/imagens/imagem2.png">
   </p>
       </p>
-   ***main.cpp***: 
-   - **jogoDaVida.hpp**: 
-   - **jogoDaVida.cpp**: 
+      
+- **_main.cpp_**:
+   
+- **_jogoDaVida.hpp_**:
+
+- **_jogoDaVida.cpp_**: 
 
    
 ## Compilação e Execução
