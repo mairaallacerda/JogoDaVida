@@ -265,6 +265,7 @@ O código disponibilizado possui um arquivo Makefile que realiza todo o procedim
 
  <h2 align="center"> Contato</h2>
        <p align="justify">
-<a style="color:black" href="mailto:mairaallacerda@gmail.com?subject=[GitHub]%20Source%20Dynamic%20Lists">
-✉️ <i>mairaallacerda@gmail.com</i>
-</a>
+<a href="https://instagram.com/mairaallacerda" target="_blank"><img loading="lazy" src="https://img.shields.io/badge/-Instagram-%23E4405F?style=for-the-badge&logo=instagram&logoColor=white" target="_blank"></a>
+<a href = "mailto:mairaallacerd@gmail.com"><img loading="lazy" src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white" target="_blank"></a>
+</div>
+
